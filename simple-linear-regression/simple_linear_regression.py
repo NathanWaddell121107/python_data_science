@@ -21,3 +21,13 @@ regressor.fit(x_train, y_train)
 
 # Predicting the Test set results
 y_pred = regressor.predict(x_test)
+
+# Visualize the Training set results
+plt.scatter(x_train, y_train, color = 'red')
+plt.plot(x_train, regressor.predict(x_train), color = 'blue')
+plt.title('Salary vs Experience (Training set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+
+# Visualize the Test set results
