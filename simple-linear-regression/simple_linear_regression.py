@@ -32,8 +32,17 @@ plt.show()
 
 # Visualize the Test set results
 plt.scatter(x_test, y_test, color = 'red')
-plt.plot(x_test, regressor.predict(x_test), color = 'blue')
+plt.plot(x_train, regressor.predict(x_train), color = 'blue')
 plt.title('Salary vs Experience (Test set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
+
+# Predict salary after 12 years
+print(regressor.predict([[12]])) #[137605.23485427]
+
+# Get the final linear regression equation with values of the coefficients
+print(regressor.coef_) #[9332.94473799]
+print(regressor.intercept_) #25609.89799835482
+
+# Final equation would be Salary = 9332.94 x YearsExperience + 25609.90
