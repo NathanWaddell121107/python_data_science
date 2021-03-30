@@ -31,6 +31,12 @@ plt.ylabel('Salary')
 plt.show()
 
 # Visualizing the Polynomial Regression results
+plt.scatter(X, y, color = 'Red')
+plt.plot(X, lin_reg_2.predict(X_poly), color = 'blue')
+plt.title('Truth or Bluff (Polynomial Regression)')
+plt.xlabel('Position Level')
+plt.ylabel('Salary')
+plt.show()
 
 # Visualizing the Polynomial Regression results (for higher resolution and smoother curve)
 
