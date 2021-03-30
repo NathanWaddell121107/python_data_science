@@ -31,3 +31,9 @@ plt.ylabel('Salary')
 plt.show()
 
 # Visualize the Test set results
+plt.scatter(x_test, y_test, color = 'red')
+plt.plot(x_test, regressor.predict(x_test), color = 'blue')
+plt.title('Salary vs Experience (Test set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
