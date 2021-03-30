@@ -13,7 +13,7 @@ y = dataset.iloc[:, -1].values
 # Encode the categorical data
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
-ct = ColumnTransformer(transformers = [('encoder', OneHotEncoder(), [0])], remainder='passthrough')
+ct = ColumnTransformer(transformers = [('encoder', OneHotEncoder(), [3])], remainder='passthrough')
 x = np.array(ct.fit_transform(x))
 
 # Split into training / test sets
